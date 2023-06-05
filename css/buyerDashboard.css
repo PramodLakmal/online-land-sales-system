@@ -1,0 +1,114 @@
+body {
+    /*background: #43cea2;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #118961); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main_title {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xxx-large;
+    color: white
+}
+
+/* Tab System -------------------------------------------------- */
+
+.tabSystem {
+    position: relative;
+    padding-top: 80px;
+}
+
+.tabTitle {
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+}
+
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    color: white;
+  background-color: rgb(54, 124, 255);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* End of tab system */
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px auto;
+    background-color: #fff;
+    width: 80%;
+    padding: 50px;
+}
+.prof_img {
+    padding: 20px;
+    background-color: #dddddd;
+    bottom: 2px solid black;
+    border-radius: 10px;
+}
+.prof_img img{
+    width: 200px;
+    height: 200px;
+}
+.user_details {
+    background-color: #fff;
+    bottom: 2px solid black;
+}
+.text_area {
+    background-color: #dddddd;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.text_area span {
+    text-decoration: underline;
+}
+.details_container button{
+    background-color: rgb(54, 124, 255);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
+.details_container button:hover {
+    opacity: 0.9;
+}

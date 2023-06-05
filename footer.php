@@ -38,7 +38,7 @@
             </div>
             <div class="col">
                 <h3>Newsletter <div class="underline"><span></span></div></h3>
-                <form action="">
+                <form class="form" action="">
                     <i class='bx bx-envelope'></i>
                     <input type="email" placeholder= "Enter Your Email Id" required>
                     <button type = "submit"><i class='bx bx-right-arrow-alt'></i></button>

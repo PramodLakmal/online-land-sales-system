@@ -10,6 +10,9 @@ some fonts are imported from google fonts */
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+  background-color: #efefef;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -130,7 +133,7 @@ some fonts are imported from google fonts */
     margin: auto;
     align-items: center;
     justify-content: center;
-    background-color: #ececec;
+    background-color: #fff;
     border-radius: 10px;
   }
 

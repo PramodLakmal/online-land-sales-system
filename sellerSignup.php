@@ -20,7 +20,6 @@
         <input required placeholder="Enter Username" type="text" name="user" />
         <input required placeholder="Enter Password" type="password" name="pwd" />
         <input required placeholder="Re-Enter Password" type="password" name="repwd" />
-        <!-- <input hidden value="customer" type="text" name="user_type"><br> -->
         <div class="btn-div">
           <button class="submit-btn" type="submit" name="submit">
             Sign Up

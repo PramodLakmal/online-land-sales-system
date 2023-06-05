@@ -57,7 +57,7 @@ ul li a {
     text-decoration: none;
     color: #fff;
 }
-form {
+.form {
     padding-bottom: 15px;
     display: flex;
     align-items: center;
@@ -65,31 +65,31 @@ form {
     border-bottom: 1px solid #ccc;
     margin-bottom: 50px;
 }
-form .bx-envelope {
+.form .bx-envelope {
     font-size: 18px;
     margin-right: 10px;
 }
-form input {
+.form input {
     width: 100%;
     background: transparent;
     color: #ccc;
     border: 0;
     outline: none;
 }
-form button {
+.form button {
     background: transparent;
     border: 0;
     outline: none;
     cursor: pointer;
 }
-form .bx-right-arrow-alt {
+.form .bx-right-arrow-alt {
     border: 1px solid none;
     border-radius: 5px;
     padding: 5px 3px;
     font-size: 16px;
     color: #ccc;
 }
-form .bx-right-arrow-alt:hover {
+.form .bx-right-arrow-alt:hover {
     background-color: rgba(204, 204, 204, 0.3);
 }
 .social-icons .bx{

@@ -25,7 +25,7 @@ form {
 }
 .update_form {
     display: block;
-    background-color: rgb(221, 221, 221);
+    background-color: #facccc;
     border-radius: 10px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -38,14 +38,24 @@ form {
     width: 200px;
 }
 .input-field input {
-    background-color: antiquewhite;
+    background-color: white;
     padding: 5px;
+    border: none;
 }
-form .btn {
-    background-color: #0061a7;
-    padding: 5px;
-    border-radius: 10px;
-}
-button {
+
+.update_form button {
     color: #fff;
+    background-color: #0061a7;
+    padding: 8px;
+    border-radius: 10px;
+    width: 80%;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}
+.update_form button:hover {
+    opacity: 0.9;
+}
+.update_form input {
+    color: black;
 }

@@ -258,12 +258,19 @@
     <div id="Profile" class="tabcontent">
         <h2 class="tabTitle">Profile</h2>
         <?php
-        
-            $username = $_SESSION["username"];
-            $fname = $_SESSION["fname"];
-            $lname = $_SESSION["lname"];
-            $email = $_SESSION["email"];
-            $role = $_SESSION["role"];
+
+            $sql = mysqli_query($conn, "SELECT *
+            FROM admin 
+            WHERE adminID ='" . $_SESSION["id"] . "'
+            ");
+
+            $row = mysqli_fetch_array($sql);            
+
+            $username = $row["a_username"];
+            $fname = $row["a_fname"];
+            $lname = $row["a_lname"];
+            $email = $row["a_email"];
+            $role = $row["role"];
 
 
         ?>
@@ -294,6 +301,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 <!-- End of Tab System -->
