@@ -3,6 +3,29 @@ body {
     /*background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #000000, #118961); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+.nav_add {
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:10px 11px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
+}
+.nav_add:hover {
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color:#0061a7;
+}
+.nav_add:active {
+    position:relative;
+    top:1px;
+}
 
 .main_title {
     text-align: center;
@@ -63,7 +86,26 @@ body {font-family: Arial;}
   border: 1px solid #ccc;
   border-top: none;
 }
+.tabcontent button {
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:10px 11px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
+}
 
+.tabcontent button:hover {
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color:#0061a7;
+}
 /* End of tab system */
 
 
@@ -113,53 +155,53 @@ body {font-family: Arial;}
     opacity: 0.9;
 }
 
-.main_title {
-    position: relative;
-    top: 90px;
-    margin: 0 auto 0 auto;
-    width: 200px;
 
+
+.user__table {
+    margin: 10px;
 }
-.sellLand {
-    padding-top: 100px;
-    padding-bottom: 20px;
-    background-color: #efefef;
-} 
-.sellLand form{
-  background-color: #fff;
-  width:40%;
-  padding: 20px;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+.user__table h3 {
+    color: white;
 }
-.input_field {
+
+.user__tableHeader {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.input_field input, .input_field textarea {
-    margin-top: 5px;
-    padding: 12px;
-    border: 1px solid  #7D0552;
-    border-radius: 4px;
+
+.ad__table {
+    margin: 10px;
 }
-.input_field label {
-    margin-top: 8px;
+
+#users {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #d1d1d1;
+  }
+  
+#users td, #users th {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
-.input_field .btn{
-    background-color:#e5ccc9;
-    color: black;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-   
+  
+#users tr:nth-child(even){
+    background-color: #f2f2f2;
 }
-.input_field .btn:hover {
-    background-color: #ffc0cb;
+  
+#users tr:hover {
+    background-color: #ddd;}
+  
+#users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #b4b4b4;
+    color: white;
 }
-.input_field textarea {
-    height: 150px;
-    resize: none;
+
+#users button {
+    background-color: #f2f2f2;
 }

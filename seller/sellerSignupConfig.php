@@ -30,13 +30,21 @@ if (isset($_POST["submit"])) {
     
     if (mysqli_query($conn, $sql)) {
 
+        $new = mysqli_query($conn, "SELECT *
+                                    FROM seller
+                                    WHERE s_username='" . $username . "' 
+                                     ");
+
+        $row  = mysqli_fetch_array($new);
+
         session_start();
-            $_SESSION["id"] = 99;
-            $_SESSION["username"] = $username;
-            $_SESSION["fname"] = $fname;
-            $_SESSION["lname"] = $lname;
-            $_SESSION["email"] = $email;
-            $_SESSION["role"] = 'seller';
+            $_SESSION["id"] = $row['sellerID'];
+            $_SESSION["username"] = $row['s_username'];
+            $_SESSION["fname"] = $row['s_fname'];
+            $_SESSION["lname"] = $row['s_lname'];
+            $_SESSION["email"] = $row['s_email'];
+            $_SESSION["role"] = $row['role'];
+
         header("location: ../index.php");
     }
     else {

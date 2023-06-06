@@ -54,33 +54,31 @@ CREATE TABLE land(
 	l_location varchar(30) NOT NULL,
 	l_price varchar(20) NOT NULL,
 	l_imgLoc varchar(20) NOT NULL,
-	sellerID INT NOT NULL,
-
-	CONSTRAINT Land_Seller_FK FOREIGN KEY(sellerID) REFERENCES seller(sellerID)
+	sellerID INT NOT NULL
 );
 
 INSERT INTO land
 	(l_title, l_location, l_price, l_imgLoc, sellerID)
 VALUES
 	('LAKE VISTAS', 'BATHALAGODA', '232K', '1', 1),
-	('KAPIRI ISLAND', 'HIKKADUWA', '542K', '2', 1),
-	('ROSEN BURG', 'NUWARA ELIYA', '339K', '3', 1),
-	('OLIVE CITY', 'KARAPITIYA', '752K', '4', 1),
-	('CITY POINT', 'MALABE', '245K', '5', 1),
+	('KAPIRI ISLAND', 'HIKKADUWA', '542K', '2', 2),
+	('ROSEN BURG', 'NUWARA ELIYA', '339K', '3', 3),
+	('OLIVE CITY', 'KARAPITIYA', '752K', '4', 4),
+	('CITY POINT', 'MALABE', '245K', '5', 5),
 	('SPICE GROVE', 'KEGALLE', '189K', '6', 1),
-	('GREEN FIELD', 'BALANGODA', '453K', '7', 1),
-	('THE REGENT', 'PINNADUWA', '248K', '8', 1),
-	('HIGHWAY RESIDENCE', 'KADUWELA', '308K', '9', 1),
-	('VIEW POINT', 'IMADUWA', '421K', '10', 1),
+	('GREEN FIELD', 'BALANGODA', '453K', '7', 2),
+	('THE REGENT', 'PINNADUWA', '248K', '8', 3),
+	('HIGHWAY RESIDENCE', 'KADUWELA', '308K', '9', 4),
+	('VIEW POINT', 'IMADUWA', '421K', '10', 5),
 	('LEAF PARK', 'DAMBULLA', '679K', '11', 1),
-	('WELLINGTON PARK', 'KOSGAMA', '520K', '12', 1),
-	('URBAN PARK', 'MEEPE', '427K', '13', 1),
-	('TOWN VIEW', 'MALABE', '278K', '14', 1),
-	('THE TERRACE', 'KADUWELA', '648K', '15', 1),
+	('WELLINGTON PARK', 'KOSGAMA', '520K', '12', 2),
+	('URBAN PARK', 'MEEPE', '427K', '13', 3),
+	('TOWN VIEW', 'MALABE', '278K', '14', 4),
+	('THE TERRACE', 'KADUWELA', '648K', '15', 5),
 	('SERENE HILLS', 'MALABE', '337K', '16', 1),
-	('EDEN SQUARE', 'KADUWELA', '245K', '17', 1),
-	('STANFORD AVENUE', 'ATHURUGIRIYA', '442K', '18', 1),
-	('WALAUWA', 'MIRIGAMA', '169K', '19', 1),
-	('KINGSBURY PARK', 'KAHATHUDUWA', '98K', '20', 1)
+	('EDEN SQUARE', 'KADUWELA', '245K', '17', 2),
+	('STANFORD AVENUE', 'ATHURUGIRIYA', '442K', '18', 3),
+	('WALAUWA', 'MIRIGAMA', '169K', '19', 4),
+	('KINGSBURY PARK', 'KAHATHUDUWA', '98K', '20', 5)
 ;
 

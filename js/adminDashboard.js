@@ -15,7 +15,15 @@ function openTab(evt, tabName) {
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 
-  //popup conformation message to delete user account
+  //popup conformation messages
 function checkdelete() {
     return confirm('Are you sure you want to Delete this Account?');
+}
+
+function checkdeleteland() {
+  return confirm('Are you sure you want to Delete this Land?');
+}
+
+function checkresponse() {
+  return confirm('Are you sure you want to mark this as responded?');
 }

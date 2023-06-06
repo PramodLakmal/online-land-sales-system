@@ -17,26 +17,26 @@
     <h1>Contact US</h1>
 </div>
 <div class=contactUs> 
-  <form id="myForm" method="post" action="./config/contactUsConfig.php"  onsubmit="return validateForm();">
+  <form id="myForm" method="post" action="./config/contactUsConfig.php">
     
     <div class="input_field">
     <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your Name" >
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
     </div>
 
     <div class="input_field">
     <label for="Email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your Email"  >
+    <input type="text" id="email" name="email" placeholder="Your Email"  required>
     </div>
 
     <div class="input_field">
 	<label for="phone">Mobile Number</label>
-	<input type="text"  id="mobile" name="mobile" placeholder="Your phone number"  pattern="[0-9]{10}" >
+	<input type="text"  id="mobile" name="mobile" placeholder="Your phone number"  pattern="[0-9]{10}" required>
     </div>
     
     <div class="input_field">
     <label for="subject">Messege</label>
-    <textarea id="message" name="message" placeholder="Type your Messege here..."></textarea>
+    <textarea id="message" name="message" placeholder="Type your Messege here..." required></textarea>
     </div>
 
     <div class="input_field">
@@ -48,7 +48,6 @@
 
 </div>
 	
-<script src="./js/contactUs.js"></script>
 
 <?php include("footer.php"); ?>
 

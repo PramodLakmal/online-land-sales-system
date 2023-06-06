@@ -6,13 +6,14 @@
     
 ?>
 
-<link rel="stylesheet" href="./css/buyerDashboard.css">
+<link rel="stylesheet" href="./css/sellerDashboard.css">
 
 
 <!-- Tab System -->
 <section class="tabSystem">
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">Profile</button>
+        <button class="tablinks" onclick="openTab(event, 'MyLands')">My Lands</button>
         <a href="./sellLands.php"><button class="tablinks" onclick="openTab(event, 'Sell')" >Sell a Land</button></a>
     </div>
 
@@ -75,6 +76,63 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <div id="MyLands" class="tabcontent">
+        <h2 class="tabTitle">My Lands</h2>
+        <!-- Lands -->
+        <section class="users">
+            <div class="user__table">
+            <div class="user__tableHeader">
+            <h3>Lands</h3>
+                
+            </div>
+                
+                <table id="users">
+                    <tr>
+                        <th>Land Title</th>
+                        <th>Location</th>
+                        <th>Price</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+
+                    <?php
+                        $sql = "SELECT * from land
+                                WHERE sellerID = '1'
+                                ";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                            echo "
+                            <form action='./seller/deleteOrUpdateLand.php' method='post'>
+                                <tr>
+                                <td>".$row['l_title']."</td>
+                                <td>".$row['l_location']."</td>
+                                <td>".$row['l_price']."</td>
+                                <td>
+                                    <button type='submit' name='update'>Update</button>
+                                    <input hidden value=". $row['landID'] ." required type='text' name='id'>
+                                </td>
+                                <td>
+                                    <button type='submit' name='delete' onclick='return checkdeleteland()'>Delete</button>
+                                    <input hidden value=". $row['landID'] ." required type='text' name='id'>
+                                </td>
+                                
+                                </tr>
+                            </form>";
+                            }
+                        }
+                        else {
+                            echo "0 results";
+                        }
+                       
+                    ?>
+
+                </table>
+            </div>
+        </section>
     </div>
 </section>
 

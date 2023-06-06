@@ -17,8 +17,11 @@
         $result = mysqli_query($conn, "SELECT COUNT(*) FROM buyer");
         $buyerCount = mysqli_fetch_array($result);
 
-        // $result = mysqli_query($conn, "SELECT COUNT(*) FROM land");
-        // $landCount = mysqli_fetch_array($result);
+        $result = mysqli_query($conn, "SELECT COUNT(*) FROM land");
+        $landCount = mysqli_fetch_array($result);
+
+        $result = mysqli_query($conn, "SELECT COUNT(*) FROM contactUs");
+        $messageCount = mysqli_fetch_array($result);
         
         
         echo "<div class='stat__container'>
@@ -31,12 +34,12 @@
                     <h3>Sellers</h3>
                 </div>
                 <div class='stat__box'>
-                    <h1>". 5/*$landCount[0]*/ ."</h1>
+                    <h1>". $landCount[0] ."</h1>
                     <h3>Lands</h3>
                 </div>
                 <div class='stat__box'>
-                    <h1>". 6 ."</h1>
-                    <h3>Total Income</h3>
+                    <h1>". $messageCount[0] ."</h1>
+                    <h3>Contact Messages</h3>
                 </div>
                 <div class='stat__box'>
                     <h1>". 7 ."</h1>
@@ -54,6 +57,8 @@
         <button class="tablinks" onclick="openTab(event, 'Buyers')" id="defaultOpen">Buyers</button>
         <button class="tablinks" onclick="openTab(event, 'Sellers')">Sellers</button>
         <button class="tablinks" onclick="openTab(event, 'Admins')">Admins</button>
+        <button class="tablinks" onclick="openTab(event, 'Lands')">Lands</button>
+        <button class="tablinks" onclick="openTab(event, 'Messages')">Messages</button>
         <button class="tablinks" onclick="openTab(event, 'Profile')">Profile</button>
     </div>
 
@@ -117,7 +122,7 @@
                         else {
                             echo "0 results";
                         }
-                        // $conn->close();
+                   
                     ?>
 
                 </table>
@@ -182,7 +187,7 @@
                         else {
                             echo "0 results";
                         }
-                        // $conn->close();
+                   
                     ?>
 
                 </table>
@@ -247,7 +252,122 @@
                         else {
                             echo "0 results";
                         }
-                        // $conn->close();
+                    
+                    ?>
+
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <div id="Lands" class="tabcontent">
+        <h2 class="tabTitle">Lands</h2>
+        <!-- Lands -->
+        <section class="users">
+            <div class="user__table">
+            <div class="user__tableHeader">
+            <h3>Lands</h3>
+                <div class="">
+                    <a class="nav_add" href="./addUser.php?role=admin">Add new Land</a>
+                </div>
+            </div>
+                
+                <table id="users">
+                    <tr>
+                        <th>ID</th>
+                        <th>Land Title</th>
+                        <th>Location</th>
+                        <th>Price</th>
+                        <th>Seller ID</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+
+                    <?php
+                        $sql = "SELECT * from land";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                            echo "
+                            <form action='./admin/deleteOrUpdateLand.php' method='post'>
+                                <tr>
+                                <td>".$row['landID']."</td>
+                                <td>".$row['l_title']."</td>
+                                <td>".$row['l_location']."</td>
+                                <td>".$row['l_price']."</td>
+                                <td>".$row['sellerID']."</td>
+                                <td>
+                                    <button type='submit' name='update'>Update</button>
+                                    <input hidden value=". $row['landID'] ." required type='text' name='id'>
+                                </td>
+                                <td>
+                                    <button type='submit' name='delete' onclick='return checkdeleteland()'>Delete</button>
+                                    <input hidden value=". $row['landID'] ." required type='text' name='id'>
+                                </td>
+                                
+                                </tr>
+                            </form>";
+                            }
+                        }
+                        else {
+                            echo "0 results";
+                        }
+                       
+                    ?>
+
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <div id="Messages" class="tabcontent">
+        <h2 class="tabTitle">Messages waiting for your response</h2>
+        <!-- Admins -->
+        <section class="users">
+            <div class="user__table">
+            <div class="user__tableHeader">
+            <h3>Messages</h3>
+            </div>
+                
+                <table id="users">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile No</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <?php
+                        $sql = "SELECT * from contactus";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                            echo "
+                            <form action='./admin/deleteMessage.php' method='post'>
+                                <tr>
+                                <td>".$row['conUsID']."</td>
+                                <td>".$row['name']."</td>
+                                <td>".$row['email']."</td>
+                                <td>".$row['mobile']."</td>
+                                <td>".$row['message']."</td>
+                                
+                                <td>
+                                    <button type='submit' name='Responded' onclick='return checkresponse()'>Mark As Responded</button>
+                                    <input hidden value=". $row['conUsID'] ." required type='text' name='id'>
+                                </td>
+                                
+                                </tr>
+                            </form>";
+                            }
+                        }
+                        else {
+                            echo "0 results";
+                        }
+                        
                     ?>
 
                 </table>
