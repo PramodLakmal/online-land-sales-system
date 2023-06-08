@@ -24,7 +24,7 @@ CREATE TABLE buyer(
 	b_imgLoc varchar(300),
 	role varchar(10) NOT NULL,
     b_password varchar(256) NOT NULL,
-	b_email varchar(30) NOT NULL,
+	b_email varchar(30) NOT NULL
 );
 
 CREATE TABLE seller(
