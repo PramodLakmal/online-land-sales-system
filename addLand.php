@@ -5,7 +5,7 @@
     //dynamic header
     $title = 'Sell Lands'; include("header.php");
     // Check if user is a seller
-    include("./seller/sellerConfig.php");
+    include("./admin/adminConfig.php");
 
     ?> 
 
@@ -18,13 +18,13 @@
 <body>
 
 <div class="main_title">
-    <h1>Sell Your Lands</h1>
+    <h1>Add a Land</h1>
 </div>
 <div class=sellLands> 
-  <form method="post" action="./config/sellLandsConfig.php">
+  <form method="post" action="./admin/sellLandsConfig.php">
     
     <div class="input_field">
-    <label for="name">Enter Title For Your Land</label>
+    <label for="name">Enter Title</label>
     <input type="text" id="title" name="title" required>
     </div>
 
@@ -39,16 +39,11 @@
     </div>
 
     <div class="input_field">
-    <label for="subject">Enter Description For Your Land</label>
-    <textarea id="description" name="description" placeholder="Type your description here..." required></textarea>
+    <label for="subject">Enter Description</label>
+    <textarea id="description" name="description" placeholder="Type description here..." required></textarea>
     </div>
 
-    <?php
-    
-        $id = $_SESSION['id'];
-    
-    ?>
-    <input type="text"  id="seller" name="seller" value="<?php echo" $id";?>" hidden required>
+    <input type="text"  id="seller" name="seller" value="0" hidden required>
 
     <div class="input_field">
     <input type="submit" class="btn" name="Submit" value="SUBMIT"/>

@@ -1,6 +1,6 @@
 <?php
 // connect database
-include_once("./databaseConfig.php");
+include_once("../config/databaseConfig.php");
 
 
 // Check If form submitted
@@ -17,7 +17,7 @@ if(isset($_POST['Submit'])) {
                                    VALUES('$title','$location','$price','default','$id','$description')");
     
 
-    header("location: ../sellerDashboard.php");
+    header("location: ../adminDashboard.php");
     exit;
     }
     ?>

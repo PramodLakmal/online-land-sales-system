@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="./css/lands.css">
 
 <div class='city-sector'>
-        <div class='city-grid'>
+        <div class='city-grid'> 
 
 <?php
     // get land details from the database
@@ -18,7 +18,7 @@
                 echo "
 
 
-
+        <a href='./landDetails.php?id=".$row['landID']."'>   
             <div class='city' id='c1'>
                 <div class='pic-container'>
                     <img src='./images/lands/".$row['l_imgLoc'].".webp' alt=''>
@@ -43,12 +43,15 @@
                     </div>
                 </div>
             </div>
-        ";
+        </a>
+    ";
     
                             }
                         }
+    mysqli_close($conn);
     ?>
     </div>
     </div>
+    
 
 <?php include("footer.php"); ?>

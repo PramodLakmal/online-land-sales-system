@@ -268,7 +268,7 @@
             <div class="user__tableHeader">
             <h3>Lands</h3>
                 <div class="">
-                    <a class="nav_add" href="./addUser.php?role=admin">Add new Land</a>
+                    <a class="nav_add" href="./addLand.php">Add new Land</a>
                 </div>
             </div>
                 

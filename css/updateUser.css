@@ -10,7 +10,7 @@ section {
 }
 .main-title {
     position: relative;
-    top: 180px;
+    top: 100px;
 }
 form {
     display: block;
@@ -18,14 +18,15 @@ form {
 
 .container {
     display:  block;
-    margin-top: 200px;
+    margin-top: 150px;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 190px;
 }
 .update_form {
     display: block;
-    background-color: #facccc;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -40,7 +41,7 @@ form {
 .input-field input {
     background-color: white;
     padding: 5px;
-    border: none;
+    border: 1px solid #000;
 }
 
 .update_form button {
@@ -52,6 +53,8 @@ form {
     cursor: pointer;
     border: none;
     font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 .update_form button:hover {
     opacity: 0.9;
