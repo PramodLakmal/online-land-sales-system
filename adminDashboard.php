@@ -20,7 +20,7 @@
         $result = mysqli_query($conn, "SELECT COUNT(*) FROM land");
         $landCount = mysqli_fetch_array($result);
 
-        $result = mysqli_query($conn, "SELECT COUNT(*) FROM contactUs");
+        $result = mysqli_query($conn, "SELECT COUNT(*) FROM contactus");
         $messageCount = mysqli_fetch_array($result);
         
         

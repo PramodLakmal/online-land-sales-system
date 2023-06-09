@@ -1,7 +1,7 @@
 /*Sign up form styles*/
 .su-container {
-    background-image: url("../images/cities/kegalle.webp");
-    background-size: 1075px;
+    background-image: url("../images/slide/img1.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
     height: 100%;

@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <?php
     // Dynamic Header
-    // $title = 'Home'; include("header.php");
+    $title = 'Home'; include("header.php");
 ?>
   </head>
 
@@ -34,7 +34,7 @@
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 4</div>
-            <img src="./images/slide/img3.jpeg">
+            <img src="./images/slide/img3.jpg">
         </div>
 
         <div class="mySlides fade">
@@ -57,7 +57,7 @@
 
     <div class="city-sector">
         <div class="popular">
-            <p>Popular Cities</p>
+            <p>Popular Lands</p>
         </div>
         <div class="city-grid">
             <div class="city" id="c1">
@@ -100,7 +100,7 @@
         </div>
     </div>
 </body>
-<?php //require "./footer.php" ?>
+<?php require "./footer.php" ?>
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <!-- import icons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel = "icon" href = "./images/logo/logo1.png" type = "image/png">
      <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

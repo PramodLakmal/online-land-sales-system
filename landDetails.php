@@ -26,7 +26,7 @@
     $location = $row['l_location'];
     $price = $row['l_price'];
     $description = $row['l_description'];
-
+    $isSold = $row['isSold'];
     echo "
 
 
@@ -50,7 +50,10 @@
                 <i class='bx bx-money'></i>
                 <p>". $price ."</p>
             </div>
-        </div>
+        </div> ";
+
+        if ($row['isSold'] === '0' ){
+        echo "
         <a href='./paymentgateway.php?id=". $landID ."'>
         <div class='buy_btn'>
             <p>BUY NOW</p>
@@ -60,6 +63,17 @@
     </div>
 </div>
 ";
+        }
+        else if ($row['isSold'] === '1' ){
+            echo "
+            <div class='buy_btn'>
+                <p>SOLD OUT</p>
+            </div>
+            </a>
+        </div>
+    </div>
+    ";
+            }
 ?>
 
 <?php include("footer.php"); ?>

@@ -99,7 +99,7 @@
 
                     <?php
                         $sql = "SELECT * from land
-                                WHERE sellerID = '1'
+                                WHERE sellerID = '" . $_SESSION["id"] . "'
                                 ";
                         $result = $conn->query($sql);
 
@@ -125,7 +125,9 @@
                             }
                         }
                         else {
-                            echo "0 results";
+                            echo "<tr>
+                            <td>'0 results'</td>
+                            </tr>";
                         }
                        
                     ?>
@@ -137,7 +139,6 @@
 </section>
 
 <!-- End of Tab System -->
-
 
 
 <script src="./js/adminDashboard.js"></script>

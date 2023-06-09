@@ -45,6 +45,16 @@
             </div>
         </a>
     ";
+    if ($row['isSold'] === '0' ){
+            echo "<div class='available'>
+                    <p>AVAILABLE</p>
+                  </div>";
+    }
+    else if ($row['isSold'] === '1' ) {
+        echo "<div class='sold'>
+                    <p>SOLD OUT</p>
+                  </div>";
+    }
     
                             }
                         }

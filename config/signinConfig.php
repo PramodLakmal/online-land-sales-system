@@ -17,7 +17,7 @@
             sellerSignin($conn, $username, $pwd);
         }
         else {
-            header("location: ../login.php?error=invalidRole");
+            header("location: ../signin.php?error=invalidRole");
         }
         
         

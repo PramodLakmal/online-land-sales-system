@@ -6,10 +6,14 @@
 ?> 
     <link rel="stylesheet" href="./css/paymentGateway.css">
 
+<?php 
 
+    $landID = $_GET["id"];
+    $buyerID = $_SESSION["id"];
+?>
 <div class="container">
 
-    <form action="">
+    <form action="./thankyou.php" method= "POST">
 
         <div class="row">
 
@@ -17,31 +21,34 @@
 
                 <h3 class="title">billing address</h3>
 
+                <input type="text" name= "landID" value = '<?php echo "$landID"?>' hidden>
+                <input type="text" name= "buyerID" value = '<?php echo "$buyerID"?>' hidden>
+
                 <div class="inputBox">
                     <span>full name :</span>
-                    <input type="text" required>
+                    <input type="text" name= "fullName">
                 </div>
                 <div class="inputBox">
                     <span>email :</span>
-                    <input type="email" required>
+                    <input type="email" name="email">
                 </div>
                 <div class="inputBox">
                     <span>address :</span>
-                    <input type="text" required>
+                    <input type="text" name = "address">
                 </div>
                 <div class="inputBox">
                     <span>city :</span>
-                    <input type="text" required>
+                    <input type="text" >
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>state :</span>
-                        <input type="text" required>
+                        <input type="text" >
                     </div>
                     <div class="inputBox">
                         <span>zip code :</span>
-                        <input type="text" required>
+                        <input type="text" >
                     </div>
                 </div>
 
@@ -57,25 +64,25 @@
                 </div>
                 <div class="inputBox">
                     <span>name on card :</span>
-                    <input type="text" required>
+                    <input type="text" >
                 </div>
                 <div class="inputBox">
                     <span>credit card number :</span>
-                    <input type="number" required>
+                    <input type="number" >
                 </div>
                 <div class="inputBox">
                     <span>exp month :</span>
-                    <input type="text" required>
+                    <input type="text" >
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>exp year :</span>
-                        <input type="number" required>
+                        <input type="number" >
                     </div>
                     <div class="inputBox">
                         <span>CVV :</span>
-                        <input type="text" required>
+                        <input type="text" >
                     </div>
                 </div>
 
