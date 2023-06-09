@@ -13,6 +13,7 @@
 <section class="tabSystem">
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">Profile</button>
+        <button class="tablinks" onclick="openTab(event, 'MyLands')">My Lands</button>
     </div>
 
     <div id="Profile" class="tabcontent">
@@ -74,6 +75,68 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <div id="MyLands" class="tabcontent">
+        <h2 class="tabTitle">My Lands</h2>
+        <section class="users">
+            <div class="user__table">
+            <div class="user__tableHeader">
+            <h3>Lands</h3>
+                
+            </div>
+                
+                <table id="users">
+                    <tr>
+                        <th>Land Title</th>
+                        <th>Location</th>
+                        <th>Brought Price</th>
+                    </tr>
+
+                    <?php
+                        $sql1 = "SELECT * from soldlands
+                                WHERE buyerID = '" . $_SESSION["id"] . "'
+                                ";
+                        $result = $conn->query($sql1);
+
+                        if ($result->num_rows > 0) {
+                            while ($row1 = $result->fetch_assoc()) {
+
+                                $id = $row1["landID"];
+
+                                $sql2 = mysqli_query($conn, "SELECT *
+                                    FROM land
+                                    WHERE landID='" . $id . "' 
+                                     ");
+
+                                $row2  = mysqli_fetch_array($sql2);
+
+
+                            echo "
+                            <form action='./seller/deleteOrUpdateLand.php' method='post'>
+                                <tr>
+                                <td>".$row2['l_title']."</td>
+                                <td>".$row2['l_location']."</td>
+                                <td>".$row2['l_price']."</td>
+                                
+                                </tr>
+                            </form>";
+                            }
+                        }
+                        else {
+                            echo "<tr>
+                            <td>'0 results'</td>
+                            </tr>";
+                        }
+
+                        
+                        mysqli_close($conn);
+                       
+                    ?>
+
+                </table>
+            </div>
+        </section>
     </div>
 </section>
 

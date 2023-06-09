@@ -84,3 +84,7 @@ VALUES
 	('KINGSBURY PARK', 'KAHATHUDUWA', '98K', '20', 5, 0,'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, animi. Ea perspiciatis itaque illum autem architecto esse laboriosam soluta velit quod, voluptas laudantium quidem illo nesciunt asperiores mollitia beatae ipsum.')
 ;
 
+CREATE TABLE soldlands(
+    landID INT NOT NULL,   
+	buyerID INT NOT NULL	  
+);

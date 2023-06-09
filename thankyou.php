@@ -15,6 +15,9 @@
         `isSold` = '1' 
         WHERE landID='" . $landID . "'
         ");
+
+    $sql = mysqli_query($conn,"INSERT INTO soldlands (buyerID, landID) 
+                VALUES ('$buyerID', '$landID');");
 ?>
 
 
