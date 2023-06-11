@@ -15,7 +15,8 @@
         <div class="row">
             <div class="col">
                 <a href="#"><img src="./images/logo/logo2.png" class="logo"> </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit vitae impedit molevam illo libero. Consectetur reiciendis quia at cupiditate.</p>
+                <p>Welcome to LandValt:
+Your Premier Destination for Land Sales and Investments!</p>
             </div>
             <div class="col">
                 <h3>Office <div class="underline"><span></span></div></h3>

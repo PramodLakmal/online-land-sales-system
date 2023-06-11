@@ -1,5 +1,1 @@
-need to add user details to the database
-
-need to add form validations (add it last)
-
-in seller dashboard seller id should be dynamic (now im using "1" as seller id for testing)
+Database Name : landvault

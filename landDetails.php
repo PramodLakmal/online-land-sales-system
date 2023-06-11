@@ -18,6 +18,13 @@
         
     $row  = mysqli_fetch_array($sql);
 
+    // $click = $row['click_count'];
+
+    // $sql2 = mysqli_query($conn, "UPDATE land SET
+    //                               'click_count' = '$click'
+    //                               WHERE landID='" . $id . "'
+    //                               ");
+
     mysqli_close($conn);
 
     $landID = $row['landID'];

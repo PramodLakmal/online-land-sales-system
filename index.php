@@ -19,26 +19,34 @@
 
 <body>
 
+    <div class="cover">
+        <img src="./images/cities/cover.jpg" alt="">
+    </div>
+
+    <div class="site_title">
+        <p><span class= "first">Land</span><span class= "second">Vault</span> Online Land Sale</p>
+    </div>
+
     <!-- Image slider code -->
     <div class="slideshow-container">
         <!-- Slide counter -->
         <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
+           
             <img src="./images/slide/img1.jpg">
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
+           
             <img src="./images/slide/img2.jpg">
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
+        
             <img src="./images/slide/img3.jpg">
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
+    
             <img src="./images/slide/img4.jpg">
         </div>
 
@@ -55,50 +63,67 @@
         </div>
     </div>
 
-    <div class="city-sector">
+    <div class="det_con1">
+        <div class="img">
+            <img src="./images/cities/img1.jpg" alt="">
+        </div>
+        <div class="des">
+            <p class= "p1">Welcome to LandValt:<br> Your Premier Destination for Land Sales and Investments!</p>
+        </div>
+    </div>
+
+
+    <div class='city-sector'>
         <div class="popular">
             <p>Popular Lands</p>
         </div>
-        <div class="city-grid">
-            <div class="city" id="c1">
-                <div class="pic-container"></div>
-                <div class="city-det">
-                    <p class="l1">Kegalle</p>
+
+        <div class='city-grid'> 
+
+<?php
+    // get land details from the database
+    $sql = "SELECT * from land LIMIT 6";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+                echo "
+
+
+        <a href='./landDetails.php?id=".$row['landID']."'>   
+            <div class='city' id='c1'>
+                <div class='pic-container'>
+                    <img src='./images/lands/".$row['l_imgLoc'].".webp' alt=''>
+                </div>
+                <div class='city-det'>
+                    <div class='title'>
+                        <p class='l1'>".$row['l_title']."</p>
+                    </div>
                 </div>
             </div>
-            <div class="city" id="c2">
-                <div class="pic-container"></div>
-                <div class="city-det">
-                    <p class="l1">Mathara</p>
-                </div>
-            </div>
-            <div class="city" id="c3">
-                <div class="pic-container"></div>
-                <div class="city-det">
-                    <p class="l1">Matale</p>
-                </div>
-            </div>
-            <div class="city" id="c4">
-                <div class="pic-container"></div>
-                <div class="city-det">
-                    <p class="l1">Colombo</p>
-                </div>
-            </div>
-            <div class="city" id="c5">
-                <div class="pic-container"></div>
-                <div class="city-det">
-                    <p class="l1">Nuwara Eliya</p>
-                </div>
-            </div>
-            <div class="city" id="c6">
-                <div class="pic-container"></div>
-                <div class="city-det">
-                    <p class="l1">Galle</p>
-                </div>
-            </div>
-            
-        </div>
+        </a>
+    ";
+    
+                            }
+                        }
+    mysqli_close($conn);
+    ?>
     </div>
+    </div>
+
+    <div class="det_con2">
+
+        <div class="des">
+            <p>At LandValt, we are passionate about connecting buyers and sellers in the world of land transactions. Our mission is to provide a comprehensive and efficient platform that simplifies the process of buying and selling land while empowering individuals and businesses to make informed decisions. <br><br><br><br><br>LandValt offers a vast and diverse range of land listings, catering to various needs and preferences. Whether you're looking for residential, commercial, agricultural, or recreational land, our platform has you covered. Our extensive database ensures that you'll find the perfect piece of land that aligns with your requirements.</p>
+        </div>    
+
+        <div class="img">
+            <img src="./images/cities/img2.jpg" alt="">
+        </div>
+        
+    </div>
+
+
 </body>
 <?php require "./footer.php" ?>
 
