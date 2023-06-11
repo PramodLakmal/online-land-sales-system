@@ -11,6 +11,8 @@ if (isset($_POST["delete"])) {
                                 WHERE landID='" . $id . "' 
                                  ");
 
+    mysqli_close($conn);        
+                         
     header("location: ../sellerDashboard.php");
 }
 else if (isset($_POST["update"])){

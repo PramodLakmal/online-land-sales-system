@@ -9,19 +9,22 @@
 
 <section class="su-container">
   <div class="signup">
-    <h1 class="main-title">Create a <u>Seller</u> Account</h1>
+    <h1 class="main-title">Create a Seller Account</h1>
     <div class="signup-form">
-      <form action="./seller/sellerSignupConfig.php" method="post">
+      <form action="./seller/sellerSignupConfig.php" method="post" onsubmit="return checkPassword()">
         <div class="form-row">
-          <input required placeholder="Enter First Name" type="text" name="fname" />
-          <input required placeholder="Enter Last Name" type="text" name="lname" />
+          <input class="input_field" required placeholder="Enter First Name" type="text" name="fname" />
+          <input class="input_field" required placeholder="Enter Last Name" type="text" name="lname" />
         </div>
-        <input required placeholder="Enter Your Email Address" type="text" name="email" />
-        <input required placeholder="Enter Username" type="text" name="user" />
-        <input required placeholder="Enter Password" type="password" name="pwd" />
-        <input required placeholder="Re-Enter Password" type="password" name="repwd" />
+        <input class="input_field" required placeholder="Enter Your Email Address" type="text" name="email" />
+        <input class="input_field" required placeholder="Enter Username" type="text" name="user" />
+        <input class="input_field" required placeholder="Enter Password" type="password" name="pwd" id = "pswd1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,10}"/>
+        <input class="input_field" required placeholder="Re-Enter Password" type="password" name="repwd" id = "pswd2"/>
+        <label for="" class="accept">
+        <input type="checkbox" id="checkbox" onclick="enableButton()" >Accept Terms and Conditions
+        </label>
         <div class="btn-div">
-          <button class="submit-btn" type="submit" name="submit">
+          <button class="submit-btn" type="submit" name="submit" id="btn" disabled>
             Sign Up
           </button>
         </div>
@@ -34,5 +37,7 @@
     </div>
   </div>
 </section>
+
+<script src="./js/sellerSignup.js"></script>
 
 <?php include("footer.php"); ?>

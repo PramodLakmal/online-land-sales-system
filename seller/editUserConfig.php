@@ -10,9 +10,17 @@
         $id = $_POST["id"];
 
         include_once("../config/databaseConfig.php");
-        include_once("../config/functions.php");
         
-        updateUserDetails($conn, $fname, $lname, $email, $username, $role, $id);
+        $sql = mysqli_query($conn, "UPDATE seller SET
+                                    `s_fname` = '$fname',
+                                    `s_lname` = '$lname',
+                                    `s_email` = '$email',
+                                    `s_username` = '$username',
+                                    `role` = '$role'
+                                    WHERE sellerID='" . $id . "'
+                            ");
+
+        mysqli_close($conn);
 
         header("location: ../sellerDashboard.php");
 

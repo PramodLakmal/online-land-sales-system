@@ -26,29 +26,29 @@
 
                 <div class="inputBox">
                     <span>full name :</span>
-                    <input type="text" name= "fullName">
+                    <input type="text" name= "fullName" required>
                 </div>
                 <div class="inputBox">
                     <span>email :</span>
-                    <input type="email" name="email">
+                    <input type="email" name="email" required>
                 </div>
                 <div class="inputBox">
                     <span>address :</span>
-                    <input type="text" name = "address">
+                    <input type="text" name = "address" required>
                 </div>
                 <div class="inputBox">
                     <span>city :</span>
-                    <input type="text" >
+                    <input type="text" required>
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>state :</span>
-                        <input type="text" >
+                        <input type="text" required>
                     </div>
                     <div class="inputBox">
                         <span>zip code :</span>
-                        <input type="text" >
+                        <input type="text" required>
                     </div>
                 </div>
 
@@ -64,25 +64,25 @@
                 </div>
                 <div class="inputBox">
                     <span>name on card :</span>
-                    <input type="text" >
+                    <input type="text" required>
                 </div>
                 <div class="inputBox">
                     <span>credit card number :</span>
-                    <input type="number" >
+                    <input type="number" required>
                 </div>
                 <div class="inputBox">
                     <span>exp month :</span>
-                    <input type="text" >
+                    <input type="text" required>
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>exp year :</span>
-                        <input type="number" >
+                        <input type="number" required>
                     </div>
                     <div class="inputBox">
                         <span>CVV :</span>
-                        <input type="text" >
+                        <input type="text" required>
                     </div>
                 </div>
 

@@ -132,24 +132,37 @@ body {font-family: Arial;}
     bottom: 2px solid black;
 }
 .text_area {
-    background-color: #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+.text_area .data{
+    border: 1px solid black;
     margin-top: 10px;
     padding: 5px;
-    border-radius: 10px;
-}
-.text_area span {
-    text-decoration: underline;
+    width: 200px;
+
 }
 .details_container button{
     background-color: rgb(54, 124, 255);
     padding: 5px;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px;
     border: none;
-    width: 100%;
+    width: 130px;
     cursor: pointer;
     color: white;
     font-size: 15px;
+}
+.details_container form {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ececec;
 }
 .details_container button:hover {
     opacity: 0.9;

@@ -1,6 +1,6 @@
 <?php 
 
- $title = 'Tank You'; include("header.php");
+ $title = 'Thank You'; include("header.php");
     // Check if user is a buyer
     include("./buyer/buyerConfig.php");
 ?>

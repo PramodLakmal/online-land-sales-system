@@ -386,6 +386,7 @@
 
             $row = mysqli_fetch_array($sql);            
 
+            $id = $row['adminID'];
             $username = $row["a_username"];
             $fname = $row["a_fname"];
             $lname = $row["a_lname"];
@@ -404,20 +405,37 @@
             <div class="details_container">
                 <div class="user_details">
                     <div class="text_area">
-                        <h3>First name : <span><?php echo"$fname"?></span></h3>
+                        <p>First name</p>  
+                        <p class="data"><?php echo"$fname"?></p>
                     </div>
                     <div class="text_area">
-                        <h3>Last name : <span><?php echo"$lname"?></span></h3>
+                        <p>Last name</p> 
+                        <p class="data"><?php echo"$lname"?></p>
                     </div>
                     <div class="text_area">
-                        <h3>Username : <span><?php echo"$username"?></span></h3>
+                        <p>Username</p> 
+                        <p class="data"><?php echo"$username"?></p>
                     </div>
                     <div class="text_area">
-                        <h3>Email : <span><?php echo"$email"?></span></h3>
+                        <p>Email</p> 
+                        <p class="data"><?php echo"$email"?></p>
                     </div>
                     <div class="text_area">
-                        <h3>User Type : <span><?php echo"$role"?></span></h3>
+                        <p>User Type</p> 
+                        <p class="data"><?php echo"$role"?></p>
                     </div>
+                    <form action='./admin/deleteOrUpdateAdmin.php' method='post'>
+                    <div class="update">         
+                    <button type='submit' name='update'>Edit data</button>
+                    <input hidden value=<?php echo "$id";?> required type='text' name='id'>
+                    <input hidden value=<?php echo "$role";?> required type='text' name='role'>
+                    </div>
+                    <div class="delete">      
+                    <button type='submit' name='delete' onclick='return checkdelete()'>Delete Account</button>
+                    <input hidden value=<?php echo "$id";?> required type='text' name='id'>
+                    <input hidden value=<?php echo "$role";?> required type='text' name='role'>
+                    </div>
+                </form>
                 </div>
             </div>
         </div>

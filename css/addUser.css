@@ -6,6 +6,13 @@
 }
 .login-form {
     padding: 10px;
+
+}
+.addUser {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  padding-bottom: 20px;
 }
 .login-form form {
     display: flex;

@@ -14,7 +14,7 @@
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">Profile</button>
         <button class="tablinks" onclick="openTab(event, 'MyLands')">My Lands</button>
-        <a href="./sellLands.php"><button class="tablinks" onclick="openTab(event, 'Sell')" >Sell a Land</button></a>
+        <a href="./sellLands.php"><button class="tablinks" >Sell a Land</button></a>
     </div>
 
     <div id="Profile" class="tabcontent">
@@ -47,19 +47,24 @@
             <div class="details_container">
                 <div class="user_details">
                     <div class="text_area">
-                        <h3>First name : <span><?php echo"$fname"?></span></h3>
+                        <p>First name</p>  
+                        <p class="data"><?php echo"$fname"?></p>
                     </div>
                     <div class="text_area">
-                        <h3>Last name : <span><?php echo"$lname"?></span></h3>
+                        <p>Last name</p> 
+                        <p class="data"><?php echo"$lname"?></p>
                     </div>
                     <div class="text_area">
-                        <h3>Username : <span><?php echo"$username"?></span></h3>
+                        <p>Username</p> 
+                        <p class="data"><?php echo"$username"?></p>
                     </div>
                     <div class="text_area">
-                        <h3>Email : <span><?php echo"$email"?></span></h3>
+                        <p>Email</p> 
+                        <p class="data"><?php echo"$email"?></p>
                     </div>
                     <div class="text_area">
-                        <h3>User Type : <span><?php echo"$role"?></span></h3>
+                        <p>User Type</p> 
+                        <p class="data"><?php echo"$role"?></p>
                     </div>
                 </div>
                 <form action='./seller/deleteOrEditUser.php' method='post'>
@@ -141,6 +146,6 @@
 <!-- End of Tab System -->
 
 
-<script src="./js/adminDashboard.js"></script>
+<script src="./js/sellerDashboard.js"></script>
 
 <?php include("footer.php"); ?>

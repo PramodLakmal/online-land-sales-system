@@ -6,10 +6,15 @@ if (isset($_POST["delete"])) {
     $role = $_POST["role"];
 
     include_once("../config/databaseConfig.php");
-    include_once("../config/functions.php");
 
-    deleteUser($conn, $id, $role);
-    
+    $sql = mysqli_query($conn, "DELETE
+                                FROM seller
+                                WHERE sellerID='" . $id . "' 
+                                 ");
+
+    mysqli_close($conn);
+
+    //logout when delete
     session_start();
     session_unset();
     session_destroy();

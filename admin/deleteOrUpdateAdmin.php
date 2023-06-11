@@ -6,14 +6,11 @@ if (isset($_POST["delete"])) {
     $role = $_POST["role"];
 
     include_once("../config/databaseConfig.php");
+    include_once("../config/functions.php");
 
-    $sql = mysqli_query($conn, "DELETE
-                                FROM buyer
-                                WHERE buyerID='" . $id . "' 
-                                 ");
-    
-    mysqli_close($conn);
+    deleteUser($conn, $id, $role);
 
+    //logout when delete
     session_start();
     session_unset();
     session_destroy();
@@ -21,12 +18,12 @@ if (isset($_POST["delete"])) {
     header("location: ../index.php");
     exit();
 }
-else if (isset($_POST["edit"])){
+else if (isset($_POST["update"])){
 
     $id = $_POST["id"];
     $role = $_POST["role"];
 
-    header("location: ../editBuyer.php?id=$id&role=$role");
+    header("location: ../updateUser.php?id=$id&role=$role");
 }
 else {
     header("location: ../index.php");

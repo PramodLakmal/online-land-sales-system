@@ -68,6 +68,11 @@
   cursor: pointer;
   transition: all 0.5s ease;
 }
+.city .city-det .title p {
+  background-color: #012319;
+  color: #fff;
+  border-radius: 10px;
+}
 .city .city-det .location, .price {
   margin-top: 10px;
   display: flex;
